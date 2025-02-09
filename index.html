@@ -148,7 +148,7 @@ li.alumnos { display: inline-block;}
   </style>
 <script>
 function f_iframe(vpagina,vinfo) {
-document.getElementById("titulo").innerHTML =  vpagina;
+document.getElementById("titulo").innerHTML =  vinfo;
 document.getElementById("id_iframe").src = vpagina ;// "https://gestionbiblioteca.universidadlaboralab.es/index.php";
 }
 </script>
@@ -160,7 +160,7 @@ document.getElementById("id_iframe").src = vpagina ;// "https://gestionbibliotec
        <h1>Proyectos tecnología</h1>
    </header>
  <ul>
-  <li><a href="javascript:f_iframe('inicio.html')">Inicio</a></li>
+  <li><a href="javascript:f_iframe('inicio.html','Inicio')">Inicio</a></li>
   <li class="arduino">
     <a href="javascript:void(0)" class="arduinobtn">Arduino</a>
     <div class="arduino-content">
