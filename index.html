@@ -3,8 +3,11 @@
 <head>
   <style>
   body {background-color: powderblue;}
-  h1   {color: red;}
+  h1   {color: blue;}
   p    {color: red;}
+  c1 {color: blue;  font-size: 40px; } 
+  c2 {color: red;  font-size: 30px;background-color: #FFF4A3;}
+
     div {
     background-color: #FFF4A3;
     text-align: center;
@@ -156,8 +159,8 @@ document.getElementById("id_iframe").src = vpagina ;// "https://gestionbibliotec
   <title>Proyectos tecnología</title>
 </head>
 <body>
+  <center><c1>Proyectos tecnología</c1></center>
  <ul>
-    <h1  align= "center" >Proyectos tecnología</h1>
   <li><a href="javascript:f_iframe('inicio.html','Inicio')">Inicio</a></li>
   <li class="arduino">
     <a href="javascript:void(0)" class="arduinobtn">Arduino</a>
@@ -176,7 +179,7 @@ document.getElementById("id_iframe").src = vpagina ;// "https://gestionbibliotec
     <a href="javascript:void(0)" class="esp8266btn">ESP8266</a>
     <div class="esp8266-content">
       <a href="javascript:f_iframe('Control de rele con Telegram.pdf','Control de rele con Telegram')">Control de rele con Telegram</a>
-      <a href="javascript:f_iframe('Control luz con ESP-01Relay.pdf','Control luz con ESP-01R')">Control luz con ESP-01R</a>
+      <a href="javascript:f_iframe('Control luz con ESP-01Relay.pdf','Control luz con ESP-01Relay')">Control luz con ESP-01Relay</a>
     </div>
   </li>
   
@@ -210,12 +213,11 @@ document.getElementById("id_iframe").src = vpagina ;// "https://gestionbibliotec
    <li><a href="javascript:f_iframe('https://blogembarcado.blogspot.com/p/index.html','Libreria arduino Proteus')">Libreria arduino Proteus</a></li>
    
 </ul>
-    <div>
+  <center><c2 id="titulo" >Proyectos tecnología</c2></center>
+    <!--      <div>
     	<h1 id="titulo"> Inicio</h1>
-    </div>
- <center>
- <iframe  id="id_iframe" src="inicio.html" style="height:500px;width:100%" title="description"></iframe>
-</center>
+    </div>  -->
+ <center> <iframe  id="id_iframe" src="inicio.html" style="height:500px;width:100%" title="description"></iframe></center>
 <hr>
 <footer align= "center">
   <p>Author: jarp  &nbsp;&nbsp;&nbsp;&nbsp;  <a href="mailto:tecnouniab@gmail.com">tecnouniab@gmail.com</a></p>
