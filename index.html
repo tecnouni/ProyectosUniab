@@ -9,37 +9,142 @@
     background-color: #FFF4A3;
     text-align: center;
         }
-    head {
-    background-color: #FFF4A3;
-    text-align: center;
-        }
-    ul {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #38444d;
 }
 
 li {
   float: left;
 }
 
-li a {
-  display: block;
+
+
+li a, .arduinobtn {
+  display: inline-block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-a:hover:not(.active) {
-  background-color: #111;
+li a, .esp8266btn{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.active {
-  background-color:#04AA6D;
+li a, .esp32btn{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
+
+li a, .alumnosbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .arduino:hover .arduinobtn { background-color: red;}  
+li a:hover, .esp8266:hover .esp8266btn { background-color: red;}
+li a:hover, .arduino:hover .esp32btn { background-color: red;}
+li a:hover, .esp8266:hover .alumnosbtn { background-color: red;}
+
+li.arduino { display: inline-block;}
+li.esp8266 { display: inline-block;}
+li.esp32 { display: inline-block;}
+li.alumnos { display: inline-block;}
+
+.arduino-content  {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.esp8266-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.esp32-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.alumnos-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.arduino-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.esp8266-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.esp32-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.alumnos-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.arduino-content a:hover {background-color: #f1f1f1;}
+.esp8266-content a:hover {background-color: #f1f1f1;}
+.esp32-content a:hover {background-color: #f1f1f1;}
+.alumnos-content a:hover {background-color: #f1f1f1;}
+
+.arduino:hover .arduino-content { display: block;}
+.esp8266:hover .esp8266-content { display: block;}
+.esp32:hover .esp32-content { display: block;}
+.alumnos:hover .alumnos-content { display: block;}
+
+
+
   </style>
 
   <title>Page Title</title>
@@ -48,22 +153,54 @@ a:hover:not(.active) {
     <header>
     <h1>Página proyectos tecnología</h1>
    </header>
-  <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+ <ul>
+  <li><a href="#inicio">Inicio</a></li>
+  <li class="arduino">
+    <a href="javascript:void(0)" class="arduinobtn">Arduino</a>
+    <div class="arduino-content">
+      <a href="#">Entradas y salidas</a>
+      <a href="#">Motores de cc.</a>
+      <a href="#">Sonidos</a>
+      <a href="#">App control</a>
+      <a href="#">Servomotores</a>
+      <a href="#">Ultrasonido</a>
+    </div>
+  </li>
+  
+  <li class="esp8266">
+    <a href="javascript:void(0)" class="esp8266btn">ESP8266</a>
+    <div class="esp8266-content">
+      <a href="#">Control de relé con Telegram</a>
+      <a href="#">Control luz con ESP-01R</a>
+    </div>
+  </li>
+  
+  <li class="esp32">
+    <a href="javascript:void(0)" class="esp32btn">ESP32</a>
+    <div class="esp32-content">
+      <a href="#">Brazo robot</a>
+      <a href="#">Coche ESP32-Cam</a>
+      <a href="#">Coche ESP32-Cam control WEB</a>
+      <a href="#">Robot panda con ESP32</a>
+      <a href="#">ESP32 envía foto a Gmail</a>
+      <a href="#">ESP32 Cámaras Telegram</a>
+      <a href="#">Medidor de CO2, temperatura</a>
+    </div>
+  </li>
+  
+  <li class="alumnos">
+    <a href="javascript:void(0)" class="alumnosbtn">Proyecto alumnos</a>
+    <div class="alumnos-content">
+      <a href="#">Vídeo Mono</a>
+      <a href="#">Brazo robot con arduino</a>
+      <a href="#">Buga</a>
+      <a href="#">Coche arduino</a>
+    </div>
+  </li>
+  
+    <li><a href="#ci">Circuitos impresos</a></li>
+    <li><a href="#ga">Guía arduino</a></li>
 </ul>
-  <nav>
-  <a href="/html/">HTML</a> |
-  <a href="/css/">CSS</a> |
-  <a href="/js/">JavaScript</a> |
-  <a href="/jquery/">jQuery</a>
-</nav
-<div>
-  <h2</h2>
-
-</div>
 
   <iframe src="doc/04_EducaBot_ServomotoresMovilidad02.pdf" style="height:1000px;width:95%" title="description"></iframe>
 <h1></h1>
