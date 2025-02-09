@@ -148,6 +148,7 @@ li.alumnos { display: inline-block;}
   </style>
 <script>
 function f_iframe(vpagina) {
+document.getElementById("titulo").innerHTML =  vpagina;
 document.getElementById("id_iframe").src = vpagina ;// "https://gestionbiblioteca.universidadlaboralab.es/index.php";
 }
 </script>
@@ -155,11 +156,11 @@ document.getElementById("id_iframe").src = vpagina ;// "https://gestionbibliotec
   <title>Proyectos tecnología</title>
 </head>
 <body>
-    <header>
-       <h1 align= "center">Proyectos tecnología</h1>
+    <header align= "center">
+       <h1>Proyectos tecnología</h1>
    </header>
  <ul>
-  <li><a href="#inicio">Inicio</a></li>
+  <li><a href="inicio.html">Inicio</a></li>
   <li class="arduino">
     <a href="javascript:void(0)" class="arduinobtn">Arduino</a>
     <div class="arduino-content">
@@ -203,25 +204,26 @@ document.getElementById("id_iframe").src = vpagina ;// "https://gestionbibliotec
       <a href="javascript:f_iframe('brazoRobot.mp4')">Brazo robot con arduino</a>
       <a href="javascript:f_iframe('videomono.mp4')">Vídeo Mono</a>
       <a href="javascript:f_iframe('Robot_lego.mp4')">Robot lego</a>
-      <a href="javascript:f_iframe('Robot_house.mp4')">Buga</a>
-      <a href="javascript:f_iframe('casa_motorizada.mp4)">Casa motorizada</a>
-       <a href="javascript:f_iframe('Proyecto de 2ºA.mp4)">Coche arduino</a>
+                         <!--    <a href="javascript:f_iframe('Robot_house.mp4')">Buga</a>   -->
+      <a href="javascript:f_iframe('casa_motorizada.mp4')">Casa motorizada</a>
+       <a href="javascript:f_iframe('Proyecto de 2ºA.mp4')">Coche arduino</a>
     </div>
   </li>
   
     <li><a href="javascript:f_iframe('circuitos impresos.pdf')">Circuitos impresos</a></li>
- <! --    <li><a href="javascript:f_iframe('doc/)">Guía arduino</a></li> -->
+                         <!--    <li><a href="javascript:f_iframe('doc/)">Guía arduino</a></li>   -->
    <li><a href="javascript:f_iframe('https://blogembarcado.blogspot.com/p/index.html')">Libreria arduino Proteus</a></li>
    
 </ul>
-
+    <div>
+    	<h1 id="titulo"> Inicio</h1>
+    </div>
  <center>
- <iframe  id="id_iframe" src="" style="height:1000px;width:100%" title="description"></iframe>
+ <iframe  id="id_iframe" src="inicio.html" style="height:1000px;width:100%" title="description"></iframe>
 </center>
 <hr>
-<footer>
-  <p>Author: jarp</p>
-  <p><a href="mailto:tecnouniab@gmail.com">tecnouniab@gmail.com</a></p>
+<footer align= "center">
+  <p>Author: jarp  &nbsp;&nbsp;&nbsp;&nbsp;  <a href="mailto:tecnouniab@gmail.com">tecnouniab@gmail.com</a></p>
 </footer>
 </body>
 </html>
